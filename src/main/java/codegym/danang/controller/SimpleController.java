@@ -15,11 +15,11 @@ public class SimpleController {
 	@RequestMapping("/")
     public String homePage(Model model) {
         model.addAttribute("appName", appName);
-        return "p2";
+        return "/fragments/p2";
     }
 
     @GetMapping("/page1")
     public String page2() {
-        return "p1";
+        return "/fragments/p1";
     }
 }
