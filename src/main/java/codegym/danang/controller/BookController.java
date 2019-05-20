@@ -1,5 +1,6 @@
 package codegym.danang.controller;
 
+
 import codegym.danang.entity.Book;
 import codegym.danang.exception.BookNotFoundException;
 import codegym.danang.repo.BookRepository;
@@ -26,11 +27,19 @@ public class BookController {
         return bookRepository.findByTitle(bookTitle);
     }
 
+/*    @GetMapping("/{id}")
+    public Book findOne(@PathVariable Long id) {
+       Book book1 = new Book();
+       return book1;
+    }*/
+
+
     @GetMapping("/{id}")
     public Book findOne(@PathVariable Long id) {
-        return bookRepository.findById(id)
-                .orElseThrow(BookNotFoundException::new);
+        return bookRepository.findById(id).orElseThrow(BookNotFoundException::new);
     }
+
+
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
