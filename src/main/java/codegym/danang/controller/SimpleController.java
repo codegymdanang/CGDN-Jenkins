@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SimpleController {
 
-	@Value("${spring.application.name}")
-    String appName = "Welcome ";
+
  
 	@RequestMapping("/")
     public String homePage(Model model) {
-        model.addAttribute("appName", appName);
-        return "/fragments/p2";
+
+        return "/fragments/p1";
     }
 
     @GetMapping("/page1")
     public String page2() {
-        return "/fragments/p1";
+
+	    return "/fragments/p2";
     }
 }
