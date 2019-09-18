@@ -11,7 +11,7 @@ public class SimpleController {
 
 
  
-	@RequestMapping("/")
+	@RequestMapping("/mobile")
     public String homePage(Model model) {
 
         return "/fragments/p1";
