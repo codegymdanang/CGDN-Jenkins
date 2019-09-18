@@ -11,15 +11,11 @@ public class SimpleController {
 
 
  
-	@RequestMapping("/mobile")
+	@RequestMapping("/")
     public String homePage(Model model) {
 
         return "/fragments/p1";
     }
 
-    @GetMapping("/page1")
-    public String page2() {
 
-	    return "/fragments/p2";
-    }
 }
